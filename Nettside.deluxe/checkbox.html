@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <style>
+
+        #burger {
+            display: flex;
+            width: 16px;
+            height: 16px;
+            justify-content: space-between;
+            cursor: pointer;
+            flex-direction: column;
+        }
+
+        #cb {
+            display: none;
+        }
+
+        #burger > div {
+            background-color: black;
+            height: 2px;
+            transition: 0.5s;
+
+        }
+
+        #menu {
+            width: 360px;
+            background: springgreen;
+            background: -webkit-linear-gradient(left, limegreen , springgreen);
+            background: -o-linear-gradient(right, limegreen, springgreen);
+            background: -moz-linear-gradient(right, limegreen, springgreen);
+            background: linear-gradient(to right, limegreen , springgreen);
+            position: absolute;
+            top: 32px;
+            left: -300px;
+            min-height: calc(100vh - 64px);
+            transition: 0.8s;
+        }
+
+        #cb:checked ~ #menu {
+            left: 0;
+        }
+
+        #cb:checked ~ #burger > div:first-child {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        #cb:checked ~ #burger > div:nth-child(2) {
+            opacity: 0;
+        }
+
+        #cb:checked ~ #burger > div:last-child {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+        nav > div > a {
+            font-family: sans-serif "Open sans", Verdana, Helvetica, sans-serif;
+            font-size: 20px;
+            padding: 5px 5px 5px 5px;
+        }
+        h1 {
+            padding-left: 55px;
+        }
+    </style>
+</head>
+<body>
+
+<input type="checkbox" id="cb">
+<label id="burger" for="cb">
+    <div></div>
+    <div></div>
+    <div></div>
+</label>
+
+<img src="">
+<h1>Rightnocerus</h1>
+
+<nav id="menu">
+    <div><a href="galaxys8.html">Samsung Galaxy S8</a></div>
+<div><a href="pixel2.html">Google Pixel 2</a></div>
+<div><a href="u11.html">HTC U11</a></div>
+<div><a href="#"> My Phone</a></div>
+</nav>
+
+</body>
+</html>
